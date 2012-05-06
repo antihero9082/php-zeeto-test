@@ -1,0 +1,9 @@
+show_posts:
+    resource: "@AcmeHelloBundle/Resources/config/routing/posts.xml"
+    prefix:   /posts
+
+subscribers_create:
+   resource: "@AcmeHelloBundle/Resources/config/routing/subscribers.xml"
+   prefix: /subscribe
+
+

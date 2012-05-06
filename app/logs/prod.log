@@ -1,0 +1,2 @@
+[2012-05-04 21:25:24] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /" (uncaught exception) at C:\wamp\www\TestZeeto\vendor\symfony\src\Symfony\Bundle\FrameworkBundle\EventListener\RouterListener.php line 83 [] []
+[2012-05-05 22:58:44] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /" (uncaught exception) at C:\wamp\www\TestZeeto\vendor\symfony\src\Symfony\Bundle\FrameworkBundle\EventListener\RouterListener.php line 83 [] []

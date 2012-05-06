@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+    <title>Stefan's PHP Ninja Test</title>
+        
+{% stylesheets
+    '@AcmeHelloBundle/Resources/config/public/css/*'
+%}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="page">
+            <div id="header">
+                <div id="logo">
+                    <a href="/"><img src="images/logo.gif" /></a>
+                </div>
+
+                <div id="main">
+                    <h1>our blog</h1>
+                    <div id="content">
+                        <div id="innercontent">
+                            
+            {{ contents.text|raw }}
+                        </div>
+            <br/>
+            <div id="postDate">
+            {{ contents.createdAt}}
+            </div>
+     
+                    </div>
+                </div>
+
+                <div id="right">
+                    <h2>subscribe to our newsletter!</h2>
+                    <div id="login">                       
+                        {% block form %}
+                        {% render "AcmeHelloBundle:Subscribers:new" %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

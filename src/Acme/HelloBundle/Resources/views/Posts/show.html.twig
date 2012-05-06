@@ -1,0 +1,26 @@
+<h1>Posts</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Content</th>
+            <td>{{ entity.content }}</td>
+        </tr>
+        <tr>
+            <th>Createdat</th>
+            <td>{{ entity.createdAt|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('posts') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>

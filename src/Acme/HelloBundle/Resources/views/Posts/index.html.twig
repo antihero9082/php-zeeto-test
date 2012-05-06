@@ -1,0 +1,29 @@
+<h1>Posts list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Content</th>
+            <th>Createdat</th>
+            <th>Id</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('posts_show', { 'id': entity.id }) }}">{{ entity.content }}</a></td>
+            <td>{% if entity.createdAt %}{{ entity.createdAt|date('Y-m-d H:i:s') }}{% endif%}</td>
+            <td>{{ entity.id }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('posts_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
