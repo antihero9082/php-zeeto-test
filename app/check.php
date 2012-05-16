@@ -3,7 +3,7 @@
 if (!$iniPath = get_cfg_var('cfg_file_path')) {
     $iniPath = 'WARNING: not using a php.ini file';
 }
-
+//testing
 echo "********************************\n";
 echo "*                              *\n";
 echo "*  Symfony requirements check  *\n";
