@@ -24,8 +24,7 @@ class Posts
      */
     private $id;
 //for this or that
-//also this or that
-//maybe that or this
+
 
     /**
      * Set content
@@ -68,11 +67,8 @@ class Posts
 	{
 		$return $foo+bar;
 	}
+	
 
-	public function add()
-	{
-		return 1+1;
-	}
     /**
      * Get createdAt
      *
