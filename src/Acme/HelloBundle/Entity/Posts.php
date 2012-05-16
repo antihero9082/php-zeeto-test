@@ -63,6 +63,10 @@ class Posts
         $this->createdAt = $createdAt;
     }
 
+	public function add()
+	{
+		return 1+1;
+	}
     /**
      * Get createdAt
      *
