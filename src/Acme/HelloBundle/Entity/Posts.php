@@ -24,7 +24,8 @@ class Posts
      */
     private $id;
 //for this or that
-
+//also this or that
+//maybe that or this
 
     /**
      * Set content
