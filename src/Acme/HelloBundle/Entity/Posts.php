@@ -23,6 +23,7 @@ class Posts
      * @var integer $id
      */
     private $id;
+//for this or that
 
 
     /**
