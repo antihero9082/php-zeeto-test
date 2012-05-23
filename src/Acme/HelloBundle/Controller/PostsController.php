@@ -10,7 +10,7 @@ use Acme\HelloBundle\Entity\Posts;
  * Posts controller.
  *
  */
-class PostsController extends Controller
+class JobPostsController extends Controller
 {
     /**
      * Lists all Posts entities.
@@ -22,7 +22,7 @@ class PostsController extends Controller
 
         $entities = $em->getRepository('AcmeHelloBundle:Posts')->findAll();
 
-        die(var_dump($entities));
+
         return $this->render('AcmeHelloBundle:Posts:index.html.twig', array(
             'entities' => $entities
         ));
@@ -39,7 +39,7 @@ class PostsController extends Controller
         $entity = $em->getRepository('AcmeHelloBundle:Posts')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Posts entity.');
+            throw $this->createNotFoundException('Unable to find Job Posts entity.');
         }
 
         return $this->render('AcmeHelloBundle:Posts:show.html.twig', array(

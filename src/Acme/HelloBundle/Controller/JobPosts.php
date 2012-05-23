@@ -14,15 +14,27 @@ use Acme\HelloBundle\Entity\Posts;
 
 class CareerController extends Controller
 {
-    /**
-     * These are all the fields that I have so far required for the job postings
-     *
-     * @var array
-     *  array of required fields
-     *
-     */
+    public function indexAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $entities = $em->getRepository('AcmeHelloBundle:JobPosts')->findAll();
+        $contents = array();
+        foreach($entities as $entity)
+        {
+            $contents['jobType'] = $entity->getJobType();
+            $contents['jobTitle'] = $entity->getJobTitle();
+            $contents['text'] = stripslashes($entity->getContent());
+            $contents['createdAt'] = $entity->getCreatedAt();
+        }
 
-    protected $required = array(
-        'job_title' =>
-    )
+
+
+        return $this->render('AcmeHelloBundle:Hello:index.html.twig',array('contents'=>$contents));
+
+    }
+        public function newAction()
+    {
+
+    }
+
 }

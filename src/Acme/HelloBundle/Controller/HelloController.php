@@ -15,7 +15,7 @@ class HelloController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $entities = $em->getRepository('AcmeHelloBundle:Posts')->findAll();
+        $entities = $em->getRepository('AcmeHelloBundle:JobPosts')->findAll();
         $contents = array();
         foreach($entities as $entity)
         {

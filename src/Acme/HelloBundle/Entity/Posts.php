@@ -27,6 +27,10 @@ class Posts
 
 
     /**
+     * @var heading
+     */
+    private $title;
+    /**
      * Set content
      *
      * @param text $content

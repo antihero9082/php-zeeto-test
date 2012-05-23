@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="Acme\HelloBundle\Entity\JobPosts" table="jobs">
+        <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+        <id name="id" type="integer" column="job_id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="content" type="text" column="job_description"/>
+        <field name="createdAt" type="datetime" column="created_at"/>
+        <field name="jobTitle" type="text" column="job_title"/>
+        <field name="jobType" type="text" column="job_type" />
+        <lifecycle-callbacks/>
+    </entity>
+</doctrine-mapping>
