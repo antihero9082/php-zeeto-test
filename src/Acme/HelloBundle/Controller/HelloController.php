@@ -3,6 +3,7 @@
 // src/Acme/HelloBundle/Controller/HelloController.php
 namespace Acme\HelloBundle\Controller;
 
+use Acme\HelloBundle\Entity\JobPosts;
 use Acme\HelloBundle\Entity\Subscribers;
 use Acme\HelloBundle\Controller\SubscribersController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -15,7 +16,7 @@ class HelloController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $entities = $em->getRepository('AcmeHelloBundle:JobPosts')->findAll();
+        $entities = $em->getRepository('AcmeHelloBundle:JobPost')->findAll();
         $contents = array();
         foreach($entities as $entity)
         {

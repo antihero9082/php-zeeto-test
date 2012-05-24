@@ -6,6 +6,10 @@ AcmeHelloBundle_subscribers:
         resource: "@AcmeHelloBundle/Resources/config/routing/subscribers.php"
         prefix:   /subscribers
 
+AcmeHelloBundle_jobposts:
+        resource: "@AcmeHelloBundle/Resources/config/routing/jobposts.xml"
+        prefix:   /jobs
+
 
 # Internal routing configuration to handle ESI
 #_internal:
